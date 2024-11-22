@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { incrementQuantity, decrementQuantity, removeItem } from '../redux/cartSlice';
 import { BookmarkIcon, TrashIcon } from '@heroicons/react/16/solid';
+import DiscountAccordion from './DiscountAccordion';
 
 const Cart = () => {
   const items = useSelector(state => state.cart.items);
@@ -52,8 +53,8 @@ const Cart = () => {
           ))}
         </div>
 
-        {/* Summary */}
         <div>
+            {/* Summary */}
             <div className="p-4 rounded overflow-hidden shadow-md">
             <h2 className="text-xl font-semibold">The total amount of</h2>
             <div className="flex justify-between py-2">
@@ -68,8 +69,11 @@ const Cart = () => {
                 <span>Total (including VAT)</span>
                 <span>{`$${totalAmount.toFixed(2)}`}</span>
             </div>
-            <button className="w-full bg-blue-500 text-white p-2 mt-4 rounded-md">Go to checkout</button>
+            <button className="w-full bg-blue-600 text-white p-2 mt-4 rounded-md hover:bg-blue-700">Go to checkout</button>
             </div>
+
+            {/* Accordion */}
+            <DiscountAccordion />
         </div>
       </div>
     </div>
