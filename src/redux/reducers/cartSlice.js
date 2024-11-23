@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import blueShirt from '../assets/blue-shirt.png';
-import redHodies from '../assets/red-hodies.png';
+import blueShirt from '../../assets/blue-shirt.png';
+import redHodies from '../../assets/red-hodies.png';
 
 const initialState = {
   items: [

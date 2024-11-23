@@ -1,0 +1,2 @@
+export const APPLY_DISCOUNT = 'APPLY_DISCOUNT';
+export const REMOVE_DISCOUNT = 'REMOVE_DISCOUNT';
